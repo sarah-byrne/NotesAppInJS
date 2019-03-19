@@ -1,14 +1,15 @@
 (function(exports){
   var describe = function(string, callback){
+    document.write("<h3>" + string + "</h3><br>")
     callback()
   }
 
   var it = function(string, callback){
     try {
       callback()
-      document.write((":) " + string + "<br>" + "<br>"))
+      document.write(("<div style= 'color: green'> :) " + string + "</div>" + "<br>" + "<br>"))
     } catch(e) {
-      document.write((":( " + string + "<br>" + e + "<br>" + e.stack))
+      document.write(( "<div style= 'color: red'> :( " + string + "<br>" + e + "<br>" + e.stack + "</div>" + "<br>"))
     }
 
 
