@@ -8,7 +8,7 @@
       callback()
       document.write((":) " + string + "<br>" + "<br>"))
     } catch(e) {
-      document.write((":( " + string + "<br>" + e + "<br>" + e.stack))
+      document.write((":( " + string + "<br>" + e + "<br>" + e.stack +"<br>"))
     }
 
 
