@@ -9,7 +9,11 @@
       callback()
       document.write(("<div style= 'color: green'> :) " + string + "</div>" + "<br>" + "<br>"))
     } catch(e) {
+<<<<<<< HEAD
       document.write(( "<div style= 'color: red'> :( " + string + "<br>" + e + "<br>" + e.stack + "</div>" + "<br>"))
+=======
+      document.write((":( " + string + "<br>" + e + "<br>" + e.stack +"<br>"))
+>>>>>>> faf36e345a31a9ee62428f9d1bca069203da8a13
     }
 
 
