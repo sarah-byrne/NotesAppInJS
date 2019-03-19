@@ -14,4 +14,15 @@ describe('noteListView', function() {
     assert.isEqual(view.getHTML(), html1)
   })
 
+  it('returns an html list with multiple list items when the NoteList has more than one Note', function() {
+    notelist = new NoteList()
+    note1 = new Note("my first note")
+    note2 = new Note("my second note")
+    notelist.addNote(note1)
+    notelist.addNote(note2)
+    view = new NoteListView(notelist)
+    html1 = "<ul><li><div>my first note</div></li><li><div>my second note</div></li></ul>"
+    assert.isEqual(view.getHTML(), html1)
+  })
+
 });
