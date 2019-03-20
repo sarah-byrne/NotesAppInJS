@@ -7,11 +7,13 @@
         <script src="code/note-model.js"></script>
         <script src="code/note-list-model.js"></script>
         <script src="code/note-list-view.js"></script>
+        <script src="code/single-note-view.js"></script>
         <script src="note-controller.js"></script>
         <script>
             list = new NoteList()
             controller = new NoteController(list)
             controller.render()
+            controller.listen()
         </script>
     </body>
 </html>
