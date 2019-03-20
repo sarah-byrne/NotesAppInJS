@@ -10,7 +10,7 @@ describe('noteListView', function() {
     note1 = new Note("my first note")
     notelist.addNote(note1)
     view = new NoteListView(notelist)
-    html1 = "<ul><li><div>my first note</div></li></ul>"
+    html1 = "<ul><li><div><a href='#notes/0'>my first note</a></div></li></ul>"
     assert.isEqual(view.getHTML(), html1)
   })
 
@@ -21,7 +21,7 @@ describe('noteListView', function() {
     notelist.addNote(note1)
     notelist.addNote(note2)
     view = new NoteListView(notelist)
-    html1 = "<ul><li><div>my first note</div></li><li><div>my second note</div></li></ul>"
+    html1 = "<ul><li><div><a href='#notes/0'>my first note</a></div></li><li><div><a href='#notes/1'>my second note</a></div></li></ul>"
     assert.isEqual(view.getHTML(), html1)
   })
 
@@ -30,7 +30,7 @@ describe('noteListView', function() {
     note1 = new Note("a note that is longer than twenty characters")
     notelist.addNote(note1)
     view = new NoteListView(notelist)
-    html1 = "<ul><li><div>a note that is longe</div></li></ul>"
+    html1 = "<ul><li><div><a href='#notes/0'>a note that is longe</a></div></li></ul>"
     assert.isEqual(view.getHTML(), html1)
   })
 
