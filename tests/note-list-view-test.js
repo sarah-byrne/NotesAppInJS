@@ -25,4 +25,13 @@ describe('noteListView', function() {
     assert.isEqual(view.getHTML(), html1)
   })
 
+  it('only includes the first 20 chars of each note in the HTML', function(){
+    notelist = new NoteList()
+    note1 = new Note("a note that is longer than twenty characters")
+    notelist.addNote(note1)
+    view = new NoteListView(notelist)
+    html1 = "<ul><li><div>a note that is longe</div></li></ul>"
+    assert.isEqual(view.getHTML(), html1)
+  })
+
 });

@@ -8,7 +8,7 @@ describe('NoteController', function(){
         list = new NoteList()
         controller = new NoteController(list)
         controller.render()
-        html = "<ul><li><div>Favourite drink: seltzer</div></li></ul>"
+        html = "<ul><li><div>Favourite drink: sel</div></li></ul>"
         assert.isEqual(document.getElementById("app").innerHTML, html)
     })
 })
